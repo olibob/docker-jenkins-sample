@@ -1,6 +1,5 @@
-FROM ubuntu:14.04
-MAINTAINER James Turnbull "james@example.com"
-ENV REFRESHED_AT 2014-06-01
-RUN apt-get update
-RUN apt-get -y install ruby rake
+FROM olibob/centos7
+MAINTAINER Olivier Robert "robby57@gmail.com"
+ENV REFRESHED_AT 2014-10-30
+RUN yum -y install ruby rubygems rubygem-rake
 RUN gem install --no-rdoc --no-ri rspec ci_reporter_rspec
